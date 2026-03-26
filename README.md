@@ -36,6 +36,10 @@ Check the [asdf](https://github.com/asdf-vm/asdf) readme for more instructions o
 - Linux arm64
 - MacOS arm64
 
+## Development
+
+See the [Developer Guide](DEVELOPERS.md).
+
 ## License
 
 See [LICENSE](LICENSE).
