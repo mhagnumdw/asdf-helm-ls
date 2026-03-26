@@ -15,11 +15,13 @@ curl_opts=(-fsSL)
 sort_versions() {
   LC_ALL=C sort -V
 }
+
 list_all_versions() {
   git ls-remote --tags --refs "$GH_REPO" |
     grep -E -o 'refs/tags/v[0-9].*' |
     grep -E -o '[0-9]+\.[0-9]+\.[0-9]+'
 }
+
 get_os() {
   local os
   os=$(uname -s | tr '[:upper:]' '[:lower:]')
