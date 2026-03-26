@@ -10,8 +10,6 @@ fail() {
   exit 1
 }
 
-curl_opts=(-fsSL)
-
 sort_versions() {
   sed 'h; s/[+-]/./g; s/.p\([[:digit:]]\)/.z\1/; s/$/.z/; G; s/\n/ /' |
     LC_ALL=C sort -t. -k 1,1 -k 2,2n -k 3,3n -k 4,4n -k 5,5n | awk '{print $2}'
@@ -66,16 +64,11 @@ install_version() {
 
   (
     local bin_install_path="$install_path/bin"
-    local binary_path="$bin_install_path/helm_ls"
-    local download_url
 
     mkdir -p "$bin_install_path"
 
-    download_url=$(get_download_url "$version")
-    echo "* Downloading $TOOL_NAME release $version from $download_url..."
-    curl "${curl_opts[@]}" -o "$binary_path" "$download_url" || fail "Could not download $download_url"
-
-    chmod +x "$binary_path"
+    cp "$ASDF_DOWNLOAD_PATH/helm_ls" "$bin_install_path/helm_ls"
+    chmod +x "$bin_install_path/helm_ls"
     ln -s helm_ls "$bin_install_path/helm-ls"
 
     echo "$TOOL_NAME $version installation was successful!"
