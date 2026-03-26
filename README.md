@@ -32,6 +32,8 @@ helm_ls version
 
 Check the [asdf](https://github.com/asdf-vm/asdf) readme for more instructions on how to install & manage versions.
 
+> **Note:** The official binary name is `helm_ls` (with underscore), but it also responds to `helm-ls` (with hyphen).
+
 ## Tested on the following platforms
 
 - Linux x86_64
