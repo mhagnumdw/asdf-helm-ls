@@ -1,5 +1,7 @@
 # asdf-helm-ls
 
+[![Build](https://github.com/mhagnumdw/asdf-helm-ls/actions/workflows/build.yml/badge.svg)](https://github.com/mhagnumdw/asdf-helm-ls/actions/workflows/build.yml) [![Lint](https://github.com/mhagnumdw/asdf-helm-ls/actions/workflows/lint.yml/badge.svg)](https://github.com/mhagnumdw/asdf-helm-ls/actions/workflows/lint.yml)
+
 [helm-ls](https://github.com/mrjosh/helm-ls) plugin for the [asdf version manager](https://asdf-vm.com).
 
 ## Dependencies
