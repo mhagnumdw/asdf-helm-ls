@@ -76,6 +76,7 @@ install_version() {
     curl "${curl_opts[@]}" -o "$binary_path" "$download_url" || fail "Could not download $download_url"
 
     chmod +x "$binary_path"
+    ln -s helm_ls "$bin_install_path/helm-ls"
 
     echo "$TOOL_NAME $version installation was successful!"
   ) || (
