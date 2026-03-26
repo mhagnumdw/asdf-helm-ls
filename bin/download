@@ -11,6 +11,8 @@ source "${plugin_dir}/lib/utils.bash"
 mkdir -p "$ASDF_DOWNLOAD_PATH"
 
 curl_opts=(-fsSL)
+
 download_url=$(get_download_url "$ASDF_INSTALL_VERSION")
+echo "* Downloading $TOOL_NAME release $ASDF_INSTALL_VERSION from $download_url..."
 curl "${curl_opts[@]}" -o "$ASDF_DOWNLOAD_PATH/helm_ls" "$download_url"
 chmod +x "$ASDF_DOWNLOAD_PATH/helm_ls"
